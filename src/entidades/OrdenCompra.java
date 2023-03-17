@@ -1,6 +1,7 @@
 package entidades;
 
 import java.util.Date;
+import entidades.Producto;
 
 public class OrdenCompra {
 	private Integer id;
@@ -64,5 +65,18 @@ public class OrdenCompra {
 		System.out.println("La suma de los precios es: " + suma);
 	}
 	
+	public void imprimir() {
+		String stringAImprimir = " ";
+		System.out.println("============================"+"\n");
+		for(int i = 0; i < 4; i++) {
+			stringAImprimir = "El fabricante es: " + this.productos[i].getFabricante() + "\n" + 
+					"El nombre es: " + this.productos[i].getNombre() + "\n" + 
+					"El precio es: " + this.productos[i].getPrecio() + "\n";
+			 System.out.println(stringAImprimir);
+		}
+		this.sumarPrecios();
+		System.out.println("============================"+"\n");
+		
+	}
 	
 }

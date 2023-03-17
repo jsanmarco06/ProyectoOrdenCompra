@@ -49,21 +49,8 @@ public class EjemploOrdenes {
 		orden3.addProducto(prod12);
 		orden3.setCliente(cliente1);
 		
-		imprimir(orden1);
-		imprimir(orden2);
-		imprimir(orden3);
-	
-	}
-	public static void imprimir(OrdenCompra orden) {
-		Producto[] productosAux = orden.getProductos();
-		System.out.println("============================"+"\n"+ 
-							orden.getDescripcion() +  "\n"); 
-		for(Producto p : productosAux) {
-			System.out.println(
-							"El fabricante es: " + p.getFabricante() + "\n" + 
-							"El nombre es: " + p.getNombre() + "\n" + 
-							"El precio es: " + p.getPrecio() + "\n");
-		}
-		orden.sumarPrecios();
+		orden1.imprimir();
+		orden2.imprimir();
+		orden3.imprimir();
 	}
 }
